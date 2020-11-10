@@ -29,17 +29,15 @@ export default {
   },
   computed: {
     buscaResult: function(){
-      console.log(this.pokemons);
       if(this.busca == '' || this.busca == ' '){
         return this.pokemons;
       }else{
-        console.log('teste 123');
-        return this.pokemons.filter(pokemon => pokemon.name.toLowerCase() == this.busca.toLowerCase());
+        return this.pokemons.filter(poke => poke.name.toLowerCase().includes(this.busca.toLowerCase()));
       }
     }
   },
   created: function() {
-    axios.get('https://pokeapi.co/api/v2/pokemon?limit=51&offset=0').then(res => {
+    axios.get('https://pokeapi.co/api/v2/pokemon?limit=251&offset=0').then(res => {
       this.pokemons = res.data.results;
     });
   }
