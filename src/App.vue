@@ -32,7 +32,7 @@ export default {
       if(this.busca == '' || this.busca == ' '){
         return this.pokemons;
       }else{
-        console.log(this.pokemons.filter(pokemon => pokemon.name == this.busca));
+        console.log(this.pokemons.filter(pokemon => pokemon.name.toLowerCase() == this.busca.toLowerCase()));
         return this.pokemons.filter(pokemon => pokemon.name.toLowerCase() == this.busca.toLowerCase());
       }
     }
