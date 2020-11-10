@@ -1,4 +1,4 @@
-<template>
+a<template>
   <div id="app">
     <div class="column is-half is-offset-one-quarter">
       <h1 class="title is-3">Pokedex</h1>
@@ -32,7 +32,7 @@ export default {
       if(this.busca == '' || this.busca == ' '){
         return this.pokemons;
       }else{
-        console.log(this.pokemons.filter(pokemon => pokemon.name.toLowerCase() == this.busca.toLowerCase()));
+sd2        console.log(this.pokemons);
         return this.pokemons.filter(pokemon => pokemon.name.toLowerCase() == this.busca.toLowerCase());
       }
     }
